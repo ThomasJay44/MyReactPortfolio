@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <NavBar setCurrentPage={setCurrentPage} />
-      {currentPage === "About" && <About />}
+      {currentPage === "About" && <About setCurrentPage={setCurrentPage}/>}
       {currentPage === "Contact" && <Contact />}
       {currentPage === "Portfolio" && <Portfolio />}
       {currentPage === "Resume" && <Resume />}

@@ -1,10 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Resume = () => {
     return (
         <>
-            <h1>Resume</h1>
+            <h4>Resume</h4>
         </>
     );
 }
