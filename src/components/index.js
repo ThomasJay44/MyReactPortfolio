@@ -1,10 +1,10 @@
-import About from './about';
-import Contact from './contact';
-import Footer from './footer';
-import Nav from './nav';
-import Portfolio from './portfolio';
-import Resume from './resume';
+import About from './About';
+import Contact from './Contact';
+import Footer from './Footer';
+import NavBar from './Nav';
+import Portfolio from './Portfolio';
+import Resume from './Resume';
 
-export { About, Contact, Footer, Nav, Portfolio, Resume}
+export { About, Contact, Footer, NavBar, Portfolio, Resume}
 
 

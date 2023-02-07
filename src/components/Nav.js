@@ -1,16 +1,22 @@
-import React from 'react'
+import React from "react";
+import Nav from "react-bootstrap/Nav";
 
-const Nav = ({setCurrentPage}) => {
+const pages = ["About", "Contact", "Portfolio", "Resume"];
 
-    const arr = ["About", "Contact", "Page3", "Page4"]
-
+const NavBar = ({ currentPage, setCurrentPage }) => {
   return (
-    <ul>
-        {arr.map(topic => (
-            <li onClick={()=> setCurrentPage(topic)} key={topic}>{topic}</li>
+    <header>
+      <Nav className="justify-content-center">
+        {pages.map((topic) => (
+          <Nav.Item>
+            <Nav.Link onClick={() => setCurrentPage(topic)} key={topic}>
+              {topic}
+              </Nav.Link>
+          </Nav.Item>
         ))}
-    </ul>
-  )
-}
+      </Nav>
+    </header>
+  );
+};
 
-export default Nav
+export default NavBar;

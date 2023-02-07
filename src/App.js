@@ -1,24 +1,28 @@
-import { useState } from 'react';
-import './App.css';
+import React,  { useState } from "react";
+import "./App.css";
 
-import {About, Contact, Footer, Nav, Portfolio, Resume} from './components'
+import {
+  About,
+  Contact,
+  Footer,
+  NavBar,
+  Portfolio,
+  Resume,
+} from "./components";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("About")
+  const [currentPage, setCurrentPage] = useState("About");
 
   return (
     <>
-    <div>
-      < Nav setCurrentPage={setCurrentPage} />
-      {currentPage === "About" &&  <About /> }
-      {currentPage === "Contact" &&  <Contact />}
-      {currentPage === "Portfolio" && <Portfolio /> }
-      {currentPage === "Resume" &&  <Resume /> }
-    </div>
-    <br />
-    <Footer />
+      <NavBar setCurrentPage={setCurrentPage} />
+      {currentPage === "About" && <About />}
+      {currentPage === "Contact" && <Contact />}
+      {currentPage === "Portfolio" && <Portfolio />}
+      {currentPage === "Resume" && <Resume />}
+      <br></br>
+      <Footer />
     </>
-
   );
 }
 
