@@ -17,16 +17,10 @@ const Portfolio = () => {
 
         <Row>
           {projects.map((project) => (
-            <Col class="text-center" md={5}>
-              <Row>
-                <h4>{project.name}</h4>
-              </Row>
-              <Row>
-                <p>{project.description}</p>
-              </Row>
-              <Row>
-                <a>{project.tech}</a>
-              </Row>
+            <Col class="text-center" md={6}>
+              <Row><h4>{project.name}</h4></Row>
+              <Row><p>{project.description}</p></Row>
+              <Row><a>{project.tech}</a></Row>
               <Row>
                 <a href={project.repoLink}>
                   <img
