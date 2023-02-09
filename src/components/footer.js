@@ -11,6 +11,9 @@ const Footer = () => {
         <Col>
           <Row>
             <h4>Thank you for coming to my ted talk</h4>
+            <Col>
+            <a href="https://github.com/ThomasJay44">Github Link</a>
+            </Col>
           </Row>
         </Col>
       </footer>
