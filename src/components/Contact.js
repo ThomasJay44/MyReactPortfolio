@@ -32,9 +32,13 @@ const Contact = () => {
         message: ` Please input a/an ${e.target.name}`,
       });
       // setIsWrong(e.target.name);
-    } else if (e.target.name === "email"&& !isEmail.test(e.target.value)) {
+    } else if (e.target.name === "email" && !isEmail.test(e.target.value)) {
       // console.log("thanks for filling it in");
-      setFormError({ show:true, name: e.target.name, message: `Please enter a valid email`});
+      setFormError({ 
+        show:true, 
+        name: e.target.name, 
+        message: `Please enter a valid email`, 
+      });
     }
   };
   console.log();
@@ -71,7 +75,7 @@ const Contact = () => {
                 required
                 className="form-input"
               />
-              {formError.show && formError.email === "email" && <h3>{formError.message}</h3>}
+              {formError.show && formError.name === "email" && <h3>{formError.message}</h3>}
             </Form.Group>
           </Row>
 
@@ -87,7 +91,7 @@ const Contact = () => {
                 required
                 className="form-input"
               />
-              {formError.show && formError.message === "message" && <h3>{formError.message}</h3>}
+              {formError.show && formError.name === "message" && <h3>{formError.message}</h3>}
             </Form.Group>
           </Row>
         </Col>
